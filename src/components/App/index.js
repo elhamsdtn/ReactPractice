@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./App.css";
-
+import Loading from "../Loading";
 import BookCard from "../BookCard";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -80,7 +80,7 @@ class App extends Component {
         </form>
 
         <h4>{this.state.searchMessage}</h4>
-        <h4>{this.state.bookIsLoading && "Loading"}</h4>
+        <h4>{this.state.bookIsLoading && <Loading/>}</h4>
 
         <div className="bookList">
           {this.state.bookList.map((book) => (

@@ -1,7 +1,7 @@
 import React from "react";
 
 function BookCard(props) {
-  return (
+   return (
     <div key={props.id} className="bookCard">
       {props.imgUrl && <img src={props.imgUrl} alt={props.title} />}
       <h4>
