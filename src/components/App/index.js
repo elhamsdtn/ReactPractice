@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Loading from "../Loading";
+import Heading from "../Heading";
 import BookCard from "../BookCard";
 import "./App.css";
 
@@ -62,7 +63,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Books App</h1>
+        <Heading> Books App </Heading>
 
         <form onClick={this.handleSubmit}>
           <label htmlFor="searchTerm" style={{ display: "block" }}>
@@ -80,7 +81,7 @@ class App extends Component {
         </form>
 
         <h4>{this.state.searchMessage}</h4>
-        <h4>{this.state.bookIsLoading && <Loading/>}</h4>
+        <h4>{this.state.bookIsLoading && <Loading />}</h4>
 
         <div className="bookList">
           {this.state.bookList.map((book) => (
