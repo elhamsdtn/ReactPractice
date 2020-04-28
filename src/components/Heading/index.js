@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styles from "./Heading.module.css";
 
 function Heading(props) {
-  console.log(styles);
   return (
     <div>
       <h1 className={styles.heading2}>{props.children}</h1>

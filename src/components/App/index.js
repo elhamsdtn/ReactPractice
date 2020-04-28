@@ -80,7 +80,7 @@ class App extends Component {
           <button type="submit">Search</button>
         </form>
         <h4>{this.state.searchMessage}</h4>
-        <h4>{this.state.bookIsLoading && <Loading />}</h4>
+        {this.state.bookIsLoading && <Loading />}
         <div className="bookList">
           {this.state.bookList.map((book) => (
             <BookCard
