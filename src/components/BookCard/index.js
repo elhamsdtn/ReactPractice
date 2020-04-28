@@ -8,10 +8,13 @@ function BookCard(props) {
       <h4>
         <a href={props.link}>{props.title}</a>
       </h4>
-      <p>{props.description}</p>
-      <p>
-        {props.categories && <strong> Categories: {props.categories} </strong>}
-      </p>
+      {props.description && <p> {props.description} </p>}
+
+      {props.categories && (
+        <p>
+          <strong> Categories: {props.categories} </strong>
+        </p>
+      )}
     </div>
   );
 }
@@ -21,7 +24,7 @@ BookCard.propTypes = {
   imgUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   categories: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
 

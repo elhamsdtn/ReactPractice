@@ -63,8 +63,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Heading> Books App </Heading>
-
+        <Heading>Books App</Heading>
+        <h1 className="heading2">Books App2</h1>
         <form onClick={this.handleSubmit}>
           <label htmlFor="searchTerm" style={{ display: "block" }}>
             Search for a book:
@@ -79,10 +79,8 @@ class App extends Component {
           />
           <button type="submit">Search</button>
         </form>
-
         <h4>{this.state.searchMessage}</h4>
         <h4>{this.state.bookIsLoading && <Loading />}</h4>
-
         <div className="bookList">
           {this.state.bookList.map((book) => (
             <BookCard
