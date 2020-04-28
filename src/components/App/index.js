@@ -81,6 +81,9 @@ class App extends Component {
         </form>
         <h4>{this.state.searchMessage}</h4>
         {this.state.bookIsLoading && <Loading />}
+        {this.state.bookIsLoading && <Loading />}
+        {this.state.bookIsLoading && <Loading />}
+        {this.state.bookIsLoading && <Loading />}
         <div className="bookList">
           {this.state.bookList.map((book) => (
             <BookCard
