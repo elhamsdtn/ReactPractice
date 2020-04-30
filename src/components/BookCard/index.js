@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Image from "../Image";
 
 function BookCard(props) {
   return (
     <div key={props.id} className="bookCard">
-      {props.imgUrl && <img src={props.imgUrl} alt={props.title} />}
+      <Image src={props.imgUrl} />
       <h4>
         <a href={props.link}>{props.title}</a>
       </h4>
@@ -26,6 +27,7 @@ BookCard.propTypes = {
   link: PropTypes.string.isRequired,
   description: PropTypes.string,
   categories: PropTypes.arrayOf(PropTypes.string.isRequired),
+  name: PropTypes.string,
 };
 
 export default BookCard;
