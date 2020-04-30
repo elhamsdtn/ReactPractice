@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Image from "../Image";
 
 function BookCard(props) {
   return (
     <div key={props.id} className="bookCard">
-      {props.imgUrl && <img src={props.imgUrl} alt={props.title} />}
+      {props.imgUrl && <Image src={props.imgUrl} />}
       <h4>
         <a href={props.link}>{props.title}</a>
       </h4>
