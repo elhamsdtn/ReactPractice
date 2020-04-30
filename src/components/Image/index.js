@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./Image.module.css";
 
 function Image(props) {
-  return <img className={styles.heading2} src={props.src} alt={"Book"} />;
+  return <img className={styles.image} src={props.src} alt={"Book"} />;
 }
 
 Image.propTypes = {
