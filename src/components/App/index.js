@@ -64,7 +64,6 @@ class App extends Component {
     return (
       <div className="App">
         <Heading>Books App</Heading>
-        <h1 className="heading2">Books App2</h1>
         <form onClick={this.handleSubmit}>
           <label htmlFor="searchTerm" style={{ display: "block" }}>
             Search for a book:
